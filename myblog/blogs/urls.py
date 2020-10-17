@@ -6,5 +6,6 @@ urlpatterns = [
     path("new/", views.new, name="new"),
     path("article/all/", views.article_all, name="article_all"),
     re_path(r"article/([0-9]+)/", views.view_article, name="view_article"),
-    re_path(r"article/([0-9]+)/edit/", views.edit_article, name="edit_article")
+    re_path(r"article/([0-9]+)/edit/", views.edit_article, name="edit_article"),
+    re_path(r"article/([0-9]+)/delete/", views.delete_article, name="delete_article"),
 ]

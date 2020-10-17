@@ -43,3 +43,12 @@ def edit_article(request, pk):
         article.save()
         return redirect(view_article, pk)
     return render(request, template_name, {"article": article})
+
+
+def delete_article(request, pk):
+    try:
+        article = Article.objects.get(pk=pk)
+    except Article.DoesNotExist:
+        raise Http404
+    article.delete()
+    return redirect(article_all)

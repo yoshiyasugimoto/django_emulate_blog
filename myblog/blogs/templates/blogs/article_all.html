@@ -9,6 +9,8 @@
 <h3>投稿された記事一覧</h3>
 {% for article in articles %}
 <p><a href="{%url 'view_article' article.pk%}">{{ article.title}} - {{ article.text}}</a></p>
+<p><a href="{%url 'edit_article' article.pk%}">編集</a></p>
+<p><a href="{%url 'delete_article' article.pk%}">削除</a></p>
 {% endfor %}
 </body>
 </html>
