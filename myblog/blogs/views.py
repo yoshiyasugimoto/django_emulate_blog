@@ -1,5 +1,5 @@
 from django.http import Http404
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from .models import Article
 
@@ -29,3 +29,17 @@ def view_article(request, pk):
     except Article.DoesNotExist:
         raise Http404
     return render(request, template_name, article)
+
+
+def edit_article(request, pk):
+    template_name = "blogs/edit_article.html"
+    try:
+        article = Article.objects.get(pk=pk)
+    except Article.DoesNotExist:
+        raise Http404
+    if request.method == "POST":
+        article.title = request.POST["title"]
+        article.text = request.POST["text"]
+        article.save()
+        return redirect(view_article, pk)
+    return render(request, template_name, {"article": article})
