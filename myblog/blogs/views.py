@@ -1,4 +1,4 @@
-from django.http import Http404
+from django.http import Http404, JsonResponse
 from django.shortcuts import render, redirect
 
 from .models import Article
@@ -28,7 +28,7 @@ def view_article(request, pk):
         article = Article.objects.get(pk=pk)
     except Article.DoesNotExist:
         raise Http404
-    return render(request, template_name, article)
+    return render(request, template_name, {"article": article})
 
 
 def edit_article(request, pk):
@@ -52,3 +52,24 @@ def delete_article(request, pk):
         raise Http404
     article.delete()
     return redirect(article_all)
+
+
+def like(request, pk):
+    try:
+        article = Article.objects.get(pk=pk)
+    except Article.DoesNotExist:
+        raise Http404
+    article.like += 1
+    article.save()
+    return redirect(view_article, pk)
+
+
+def api_like(request, pk):
+    try:
+        article = Article.objects.get(pk=pk)
+    except Article.DoesNotExist:
+        raise Http404
+    article.like += 1
+    article.save()
+
+    return JsonResponse({"like": article.like})
