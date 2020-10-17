@@ -6,6 +6,7 @@ class Article(models.Model):
     text = models.TextField()
     posted_at = models.DateTimeField(auto_now_add=True)
     last_modify = models.DateTimeField(auto_now=True)
-
+    like = models.IntegerField(default=0)
+    
     def __str__(self):
         return self.title
