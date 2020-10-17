@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>article all</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<h3>投稿された記事一覧</h3>
+{% for article in articles %}
+<p><a href="{%url 'view_article' article.pk%}">{{ article.title}} - {{ article.text}}</a></p>
+{% endfor %}
+</body>
+</html>
