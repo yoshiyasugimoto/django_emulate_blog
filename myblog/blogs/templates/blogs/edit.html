@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8"/>
-    <title>my-blog-new</title>
+    <title>my-blog-edit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -14,9 +14,9 @@
 <form action="" method="post">
     {% csrf_token %}
     <p><label for="title_input">記事のタイトル</label></p>
-    <p><input type="text" name="title" id="title_input"></p>
+    <p><input type="text" name="title" id="title_input" value="{{article.title}}"></p>
     <p><label for="text_area">記事の本文</label></p>
-    <p><textarea name="text" id="text_area" cols="30" rows="10"></textarea></p>
+    <p><textarea name="text" id="text_area" cols="30" rows="10">{{article.text}}</textarea></p>
     <p>
         <button type="submit">投稿</button>
     </p>
