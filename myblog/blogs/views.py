@@ -1,7 +1,7 @@
 from django.http import Http404, JsonResponse
 from django.shortcuts import render, redirect
 
-from .models import Article
+from .models import Article, Comment
 
 
 def index(request):
@@ -28,6 +28,8 @@ def view_article(request, pk):
         article = Article.objects.get(pk=pk)
     except Article.DoesNotExist:
         raise Http404
+    if request.POST == "POST":
+        Comment.objects.create(text=request.POST["text"], article=article)
     return render(request, template_name, {"article": article})
 
 
