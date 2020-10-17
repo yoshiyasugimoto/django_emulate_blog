@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1eda5632-ae4e-4511-95c3-67418311642a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/myblog/blogs/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/myblog/blogs/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myblog/blogs/templates/blogs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/myblog/blogs/templates/blogs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/myblog/myblog/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/myblog/myblog/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -27,6 +31,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -64,13 +69,13 @@
       <screen x="0" y="23" width="1440" height="826" />
     </state>
     <state x="0" y="74" key="SettingsEditor/0.23.1440.826@0.23.1440.826" timestamp="1602903734523" />
-    <state x="781" y="189" width="598" height="490" key="find.popup" timestamp="1602874316909">
+    <state x="781" y="189" width="598" height="490" key="find.popup" timestamp="1602927101300">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
-    <state x="781" y="189" width="598" height="490" key="find.popup/0.23.1440.826@0.23.1440.826" timestamp="1602874316909" />
-    <state x="25" y="173" width="670" height="676" key="search.everywhere.popup" timestamp="1602873873115">
+    <state x="781" y="189" width="598" height="490" key="find.popup/0.23.1440.826@0.23.1440.826" timestamp="1602927101300" />
+    <state x="25" y="173" width="670" height="676" key="search.everywhere.popup" timestamp="1602928205190">
       <screen x="0" y="23" width="1440" height="826" />
     </state>
-    <state x="25" y="173" width="670" height="676" key="search.everywhere.popup/0.23.1440.826@0.23.1440.826" timestamp="1602873873115" />
+    <state x="25" y="173" width="670" height="676" key="search.everywhere.popup/0.23.1440.826@0.23.1440.826" timestamp="1602928205190" />
   </component>
 </project>
